@@ -2,5 +2,5 @@ package.json sisältää riippuvuudet -> npm install root-kansiossa
 Asennettuna VSCode lisäsosa "EJS Language support" -> ejs-tiedostojen tuki
 mongoDB asennettuna -> https://www.youtube.com/watch?v=wcx3f0eUiAw
 
-
+Sovelluksen voi ajaa komennolla 'npm run start'
 

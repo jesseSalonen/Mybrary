@@ -1,3 +1,4 @@
+<%# Jokaisen sivun visuaalinen perusrakenne, tällä säästetään toistuvaa koodia %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,10 @@
     <title>Mybrary</title>
 </head>
 <body>
+    <%# partial-viewit (nimet selventävät tarkoitusta!) %> 
     <%- include('../partials/header.ejs') %>
     <%- include('../partials/errorMessage.ejs') %>
+    <%# <body>:n sisään tulevat kaikki sovelluksen res.render() -viewit %> 
     <%- body %>
 </body>
 </html>
