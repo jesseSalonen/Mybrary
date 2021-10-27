@@ -25,6 +25,7 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 // Kerrotaan sovellukselle, mistä kaikki julkiset tiedostot löytyvät
 app.use(express.static('public'))
+// REST-pyyntöjen parsimiseen tarkoitetun kirjaston asetuksia
 app.use(express.urlencoded({ limit: '10mb', extended: false}))
 
 // Sisällytä mongoose-paketti, joka mahdollistaa mongoDB-tietokannan yhdistämisen
@@ -40,6 +41,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 
 // Käske sovellusta käyttämään aikaisemmin haettuja routereita tietyissä endpointeissa
 app.use('/', indexRouter)
+// Kirjailijoiden routerit eivät tarvitse eteensä aina /authors-polkua, koska tässä se lisätään oletuksena
 app.use('/authors', authorRouter)
 
 // Määritetään portti, jota sovellus kuuntelee. Joko palvelimen määrittämä, tai oletuksena 3000

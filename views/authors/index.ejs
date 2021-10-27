@@ -1,10 +1,14 @@
+<%# View kirjailijoiden haulle %> 
 <h2>Search Authors</h2>
+<%# <form> muodostaa REST-pyynnön palvelimelle, tässä tilanteessa /authors ja GET %> 
 <form action="/authors" method="GET">
     <label>Name</label>
+    <%# Jos ollaan haettu kirjailijoita, tallentaa haetun tekstin kenttään %> 
     <input type="text" name="name" value="<%= searchOptions.name %>">
     <button type="submit">Search</button>
 </form>
 <br>
+<%# Tulosta jokaisen kirjailijan nimi hakukentän alle %> 
 <% authors.forEach(author => { %>
     <div><%= author.name %></div>
 <% }) %> 

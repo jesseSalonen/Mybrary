@@ -1,2 +1,5 @@
+<%# Rakennetaan input-kenttä, johon uuden kirjailijan nimi tulee %>
+<%# Käytetään partialina, koska samaa kenttää käytetään kirjailijan muokkaamiskenttänä %> 
 <label>Name</label>
+<%# Jos ollaan muokkaamassa, syötetään kenttään automaattisesti muokattavan kirjailijan nimi %> 
 <input type="text" name="name" value="<%= author.name %>">
